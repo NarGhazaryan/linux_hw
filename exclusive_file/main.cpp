@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 int main() {
-    int logFD = open("./log.txt", O_WRONLY);
+    int logFD = open("./exclusive_file.log", O_WRONLY);
 
     if(logFD < 0) {
         perror("Chbacvav baxtd");
