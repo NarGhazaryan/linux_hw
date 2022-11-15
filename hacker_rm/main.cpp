@@ -4,7 +4,7 @@
 #include <vector>
 #include <unistd.h>
 
-off_t getFileSize(char *path)
+off_t getFileSize(const char *path)
 {
     struct stat stat_struct;
     if (stat(path, &stat_struct) == 0)
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
         perror("Arguments shortage! Are you sure, you are a hacker?");
     }
 
-    char *path = argv[1];
+    const char* const path = argv[1];
     int rFD = open(path, O_WRONLY);
 
     if (rFD < 0)
