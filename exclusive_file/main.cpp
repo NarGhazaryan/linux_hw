@@ -33,5 +33,8 @@ int main() {
         return 0;
     }
 
+    close(logFD);
+    close(logFDDup);
+
     return 0;
 }
